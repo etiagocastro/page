@@ -115,12 +115,21 @@ a {
     position: relative;
     overflow: hidden;
 }
+.profile {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+}
 .project {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    text-align: center;
+    text-align: left;
     position: relative;
     z-index: 2;
+    border-radius: 20px;
 }
 .project:before {
     content: "";
@@ -143,7 +152,7 @@ a {
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: all 0.5s ease;
 }
 .project li:hover {
