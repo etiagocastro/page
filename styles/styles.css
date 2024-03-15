@@ -132,16 +132,12 @@ a {
     border-radius: 20px;
 }
 .project:before {
-    content: "";
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    filter: blur(10px);
+background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
 }
 .project li {
     position: relative;
