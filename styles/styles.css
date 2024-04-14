@@ -76,7 +76,12 @@ nav a:hover {
 }
 
 article {
-    margin: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
 }
 
 ul {
