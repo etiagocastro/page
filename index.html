@@ -1,69 +1,102 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCASTROCNA</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Estilos CSS -->
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-
-    <!-- Fontes do Google -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>TCASTROCNA</h1>
 
-            <div class="social-icons">
-                <a href="https://github.com/tcastrocna" target="_blank"><img src="img/github.png" alt="GitHub"></a>
-                <a href="https://instagram.com/tcastrocna" target="_blank"><img src="img/instagram.png" alt="Twitter"></a>
-                 <a href="https://www.linkedin.com/in/tcastrocna/" target="_blank"><img src="img/linkedin.png" alt="Twitter"></a>
-            </div>
-
-        </header>
-        <nav>
-            <a href="#" onclick="changeContent('home')">Inicio</a>
-            <a href="#" onclick="changeContent('about')">Contato</a>
-            <a href="#" onclick="changeContent('contact')">Sobre</a>
-        </nav>
-        <article id="content">
-            <div class="project-container">
-                <div class="project">
-                    <h2>Projetos no GitHub</h2>
-                    <p>Aqui estão alguns dos meus projetos no GitHub:</p>
-                    <ul>
-                        <li><a href="https://github.com/tcastrocna/Flashing-TrafficLight" target="_blank">Semáforo com pisca Alerta</a></li>
-                        <li><a href="https://github.com/tcastrocna/HomeAutomation-SinricPRO" target="_blank">Automação Residencial com a Plataforma Sinric PRO</a></li>
-                        <li><a href="https://github.com/tcastrocna/HomeAutomation-RainMaker" target="_blank">Automação Residencial com a plataforma RainMaker</a></li>
-                        <li><a href="https://github.com/tcastrocna/HomeAutomation-Blynk" target="_blank">Automação Residencial com a plataforma Blynk IoT 2.0</a></li>
-                    </ul>
-                </div>
-            </div>
-        </article>
+     <!-- Modal Apenas em construção da página -->
+     <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h2>🚧Página em Construção🚧</h2>
+            <p>Algumas funcionalidades podem não estar disponíveis ou não funcionar como deveria..</p>
+            <button id="btnClose">OK</button>
+        </div>
         <script>
-            function changeContent(page) {
-                // You can add logic here to load content dynamically based on the selected page
-                if (page === 'about') {
-                    document.getElementById('content').innerHTML = `<h2>Contato</h2><p>🚧🚧Pagina em construção, em breve novidades....🚧🚧</p>`;
-                } else if (page === 'contact') {
-                    document.getElementById('content').innerHTML = `<h2>Sobre</h2><p>🚧🚧Pagina em construção, em breve novidades....🚧🚧</p>`;
-                } else {
-                    // Default to Home page content
-                    document.getElementById('content').innerHTML = `
-            <h2>Projetos no GitHub</h2>
-            <p>Aqui estão alguns dos meus projetos no GitHub:</p>
-            <ul>
-                <li><a href="https://github.com/tcastrocna/Flashing-TrafficLight" target="_blank">Semáforo com pisca Alerta</a></li>
-                <li><a href="https://github.com/tcastrocna/HomeAutomation-SinricPRO" target="_blank">Automação Residencial com a Plataforma Sinric PRO</a></li>
-                <li><a href="https://github.com/tcastrocna/HomeAutomation-RainMaker" target="_blank">Automação Residencial com a plataforma RainMaker</a></li>
-                <li><a href="https://github.com/tcastrocna/HomeAutomation-Blynk" target="_blank">Automação Residencial com a plataforma Blynk IoT 2.0</a></li>
-            </ul>`;
-                }
-            }
+        document.addEventListener('DOMContentLoaded', function() {
+        var modal = document.getElementById('myModal'); // Obtém o modal
+        var btnClose = document.getElementById('btnClose'); // Obtém o botão de fechar
+        var span = document.getElementsByClassName('close')[0]; // Obtém o elemento de fechar
+        modal.style.display = 'block';
+        btnClose.onclick = function() {
+        modal.style.display = 'none';
+        }
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }    }
+
+        document.onkeydown = function(event) {
+        event = event || window.event;
+        if (event.keyCode == 27) {
+            modal.style.display = 'none';
+        }   } });
         </script>
     </div>
+
+
+    <!-- Cabeçalho-->
+    <header>
+        <div class="profile-info">
+            <div class="container">
+                <img src="assets/images/perfil.jpeg" alt="Sua Foto" class="profile-img">
+                <h1>Tiago Castro</h1>
+                <p>Formado como Técnico em Eletrônica, Atualmente Graduando em Engenharia Elétrica.</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://instagram.com/tcastrocna" class="social-icon"><img src="assets/images/instagram.svg" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/in/tcastrocna/" class="social-icon"><img src="assets/images/linkedin.svg" alt="Linkedin"></a>
+            <a href="https://github.com/tcastrocna" class="social-icon"><img src="assets/images/github.svg" alt="GitHub"></a>
+        </div>
+    </header>
+    
+    <!-- Projetos -->
+    <section class="projects">
+        <div class="container">
+            <h2>Meus Projetos</h2>
+            <P>Estes são alguns projetinhos de eletrônica e automação com chip de desenvolvimento Esp32. </P>
+            <div class="project">
+                <h3>Semáforo com pisca Alerta</h3>
+                <p>Em algumas cidades os semáforos entram em alerta durante a madrugada, ou seja, apenas os leds na cor amarela ficam piscando fazendo com que o motorista preste apenas atenção ao cruzar, esse método é utilizado em cidades com pouco ou quase sem nenhum trânsito na madrugada, isso evita o motorista ficar parado no sinal e ser assaltado por exemplo. E este é um projeto simples para simular esta situação seja para fazer apenas por diversão ou educação, consite em quando o botão físico for desativado o semáforo entra em modo alerta, ao botão ser ativado o sinal funcionará normalmente.</p>
+                <a href="https://github.com/tcastrocna/Flashing-TrafficLight">Ver Mais</a>
+            </div>
+            <div class="project">
+                <h3>Automação Residencial com a Plataforma Sinric PRO</h3>
+                <p>Projeto simples de automação residencial com esp32 e plataforma SinricPro, controle de iluminação, climatização e equipamentos.</p>
+                <a href="https://github.com/tcastrocna/HomeAutomation-SinricPRO">Ver Mais</a>
+            </div>
+            <div class="project">
+                <h3>Automação Residencial com a plataforma RainMaker</h3>
+                <p>Projeto simples de automação residencial com chip esp32 e plataforma RainMaker. Controle de iluminação, climatização e equipamentos.</p>
+                <a href="https://github.com/tcastrocna/HomeAutomation-RainMaker">Ver Mais</a>
+            </div>
+            <div class="project">
+                <h3>Automação Residencial com a plataforma Blynk IoT 2.0</h3>
+                <p>Projeto simples de automação residencial com chip esp32 e plataforma blynk iot, controle de iluminação, climatização e equipamentos.</p>
+                <a href="https://github.com/tcastrocna/HomeAutomation-Blynk">Ver Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="contato">
+        <h2>Entre em Contato</h2>
+        <p>Você tem um projeto em mente, entre em contato comigo aqui</p>
+        <form action="#">
+            <input type="text" placeholder="Seu Nome">
+            <input type="email" placeholder="Seu E-mail">
+            <textarea placeholder="Sua Mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    
+    <footer>
+        <p> © TCASTROCNA - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
